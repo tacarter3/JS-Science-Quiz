@@ -38,3 +38,55 @@ let questions = [
     answer: 3
     },
     ]
+// add function that initiates quiz
+
+getStarted = () => {
+    questionCounter = 0
+    score = 0
+    availableQuestions = [...questions]
+    getNewQuestion()
+}
+
+// add function that posts each question 
+
+getNewQuestion = () => {
+    if(availableQuestions.length === 0 || questionCounter > maxQuestions){
+        localStorage.setItem('mostRecentScore', score)
+        return window.location.assign('score.html')
+    }
+    questionCounter++
+    progressText.innerText = `Question ${questionCounter} of ${maxQuestions}`
+    progressBarFull.style.width = `${(questionCounter/maxQuestions)*100}%`
+
+
+    const questionsRandNumber = Math.floor(Math.random()*availableQuestions.length)
+    currentQuestion = availableQuestions[questionsRandNumber]
+    question.innerText = currentQuestion.question
+    choices.forEach(choice =>{
+        const number = choice.dataset['number']
+        choice.innerText = currentQuestion['choice' + number]
+        })
+
+    availableQuestions.splice(questionsRandNumber, 1)
+    trueAnswers = true
+}
+
+// valiate answer choices and move to next question
+
+choices.forEach(choice =>{
+    choice.addEventListener('click', e =>{
+        if(!trueAnswers) 
+        return trueAnswers = false
+        const selectedChoice = e.target
+        const selectedAnswer = selectedChoice.dataset['number']
+        let classToApply = selectedAnswer == currentQuestion.answer ? 'correct' : 'incorrect'
+        if(classToApply === 'correct') {
+            incrementScore(scorePoints)
+        }
+        selectedChoice.parentElement.classList.add(classToApply)
+        setTimeout(() =>{
+            selectedChoice.parentElement.classList.remove(classToApply)
+            getNewQuestion()
+        },1000)
+    })
+})
