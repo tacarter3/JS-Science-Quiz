@@ -47,7 +47,25 @@ getStarted = () => {
     getNewQuestion()
 }
 
-// add function that posts each question 
+
+
+// initialize variable needed
+
+let currentQuestion = {}
+let trueAnswers = true
+let score = 0
+let questionCounter = 0
+let availableQuestions = []
+
+const question = document.querySelector('#questionText');
+const choices = Array.from(document.querySelectorAll('.choiceText')); //"Array" in Array.from must be capitalized
+const progressText = document.querySelector('#progressText');
+const scoreText = document.querySelector('#scoreNumber');
+const progressBarFull = document.querySelector('#progressBarFull');
+const scorePoints = 25
+const maxQuestions = 4
+
+// add function that initializes quiz
 
 getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > maxQuestions){
@@ -57,6 +75,7 @@ getNewQuestion = () => {
     questionCounter++
     progressText.innerText = `Question ${questionCounter} of ${maxQuestions}`
     progressBarFull.style.width = `${(questionCounter/maxQuestions)*100}%`
+
 
 
     const questionsRandNumber = Math.floor(Math.random()*availableQuestions.length)
@@ -71,7 +90,7 @@ getNewQuestion = () => {
     trueAnswers = true
 }
 
-// valiate answer choices and move to next question
+// validate answer choices and move to next question
 
 choices.forEach(choice =>{
     choice.addEventListener('click', e =>{
@@ -90,3 +109,12 @@ choices.forEach(choice =>{
         },1000)
     })
 })
+
+// update score
+incrementScore = number =>{
+    score+=number
+    scoreText.innerText = score
+}
+
+// instantiate function to start quiz
+getStarted()
