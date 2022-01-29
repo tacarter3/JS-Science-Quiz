@@ -1,25 +1,14 @@
-## Welcome to GitHub Pages
+# Welcome to Science Quiz
 
-You can use the [editor on GitHub](https://github.com/tacarter3/JS-Science-Quiz/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+1. To start the quiz, press `Play` on the main screen.
+2. Answer each question by clicking anywhere along the button of the desired answer choice.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+*Notice the question counter on the upper left corner of the screen, as well as, the score tracker in the upper right portion of the screen.*
 
-### Markdown
+3. If you desire to exit a quiz session, click the `Go Button` button at the bottom of the screen.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+*Be aware that exiting the quiz will cause a loss of progress in the quiz session and will reset quiz.*
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
 
 **Bold** and _Italic_ and `Code` text
 
