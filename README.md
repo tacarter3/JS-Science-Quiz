@@ -10,9 +10,12 @@
 *Be aware that exiting the quiz will cause a loss of progress in the quiz session and will reset quiz.*
 
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+
+### To launch the application click the link below:
+---
+
+[Science Quiz](https://tacarter3.github.io/JS-Science-Quiz/) and ![Image](src)
 ```
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
