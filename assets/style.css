@@ -3,6 +3,9 @@
     
 }
 
+#finalScore {
+    font-size: 60px;
+}
 
 .container {
     width: 70vw;
@@ -11,20 +14,20 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    border: 3px solid green;
+    border: 3px solid royalblue;
     margin: 9% 15%;
 }
 
 h1{
     font-size: 6em;
-    color: green;
+    color: royalblue;
     margin: 0;
 }
 
 a:link, a:visited {
     background-color: white;
     color: black;
-    border: 2px solid green;
+    border: 2px solid royalblue;
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
@@ -34,7 +37,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active {
-    background-color: green;
+    background-color: royalblue;
     color: white;
 }
 
@@ -43,7 +46,7 @@ a:hover, a:active {
     height: 70vh;
     justify-content: left;
     align-items: left;
-    border: 3px solid green;
+    border: 3px solid royalblue;
     margin: 9% 15%;
 }
 
@@ -56,49 +59,62 @@ a:hover, a:active {
     width: 100%;
 }
 
-.textques {
+.textQues {
     float: left;
     width: 50%;
     font-size: 20px;
     padding: 20px;
 }
 
-.textques p {
+.textQues p {
     margin: 0;
     padding-bottom: 5px;
     padding-left: 40px;
     font-weight: bold;
 }
 
+#progressText {
+    padding-left: 30px;
+    font-weight: bold;
+}
+
 #progressBar {
     width: 10rem;
     height: 1rem;
-    border: 0.2rem solid green;
+    border: 0.2rem solid royalblue;
     border-radius: 50px;
     /* overflow:hidden;*/
 }
 
 #progressBarFull {
     height: 100%;
-    background-color: green;
+    background-color: royalblue;
 }
 
-.textscore {
+.textScore {
+    position:absolute;
+    top: 0;
+    right: 0;
     width: 50%;
-    float: right;
+    /* float: right; */
     font-size: 20px;
-    padding: 20px;
+    padding: 30px;
     font-weight: bold;
+    /* padding-top: 0; */
+    
+    
 }
 
-.textscore p {
+.textScore p {
     float: left;
     margin: 0;
-    padding-left: 220px;
-    padding-top: 5px;
+    padding-left: 400px;
+    /* padding-top: 5px; */
+    font-size: 30px;
+    
 }
 
-.textscore h2 {
+.textScore h2 {
     display: flex;
     float: right;
     margin: 0;
@@ -108,6 +124,7 @@ a:hover, a:active {
     display: block;
     float: left;
     width: 100%;
+    margin-top: 5em;
 }
 
 .questions h3 {
@@ -116,7 +133,7 @@ a:hover, a:active {
 }
 
 .choices p {
-    border: 2px solid green;
+    border: 2px solid royalblue;
     padding: 5px 20px;
     text-align: left;
     display: block;
@@ -125,7 +142,8 @@ a:hover, a:active {
 }
 
 .choices p:hover, .choices p:active {
-    color: #BEC903;
+    color: lightblue;
+    background-color: royalblue;
 }
 
 .scoreAchievers {
@@ -134,7 +152,7 @@ a:hover, a:active {
 }
 
 .correct {
-    background-color: green;
+    background-color:royalblue;
     border-radius: 50px;
 }
 
@@ -143,7 +161,27 @@ a:hover, a:active {
     border-radius: 50px;
 }
 
-@media screen and (max-width: 1000px), (max-height: 500px) {
+.btn-quiz {
+    width: 5em;
+    height: .5em;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin: 2em;
+    margin-left: auto;
+    margin-right:auto;
+    margin-bottom: auto;
+    align-items: center;
+    text-align: center;
+    border: 5px solid royalblue;
+    border-radius: 5rem;
+    /* padding-top: 0; */
+    font-size: xx-small;
+    line-height: .5em;
+    
+    
+}
+
+@media screen and (max-width: 1000px), (max-height: 600px) {
 
 #alert {
         display: block;
@@ -181,11 +219,11 @@ a:hover, a:active {
     display: none;
 }
 
-.textques {
+.textQues {
     display: none;
 }
 
-.textques p {
+.textQues p {
     display: none;
 }
 
@@ -193,19 +231,23 @@ a:hover, a:active {
     display: none;
 }
 
+#progressText {
+    display: none;
+}
+
 #progressBarFull {
     display: none;
 }
 
-.textscore {
+.textScore {
     display: none;
 }
 
-.textscore p {
+.textScore p {
     display: none;
 }
 
-.textscore h2 {
+.textScore h2 {
     display: none;
 }
 
