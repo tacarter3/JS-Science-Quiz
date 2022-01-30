@@ -20,7 +20,6 @@ saveHighScore = e => {
         name: username.value
     }
     highScores.push(score)
-
         highScores.reverse()
         highScores.splice(4)
         localStorage.setItem('highScores', JSON.stringfly(highScores))
