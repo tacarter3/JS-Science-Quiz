@@ -4,7 +4,6 @@ const username = document.querySelector('#username')
 const scoreBtn = document.querySelector('#scoreBtn')
 const highScores = JSON.parse(localStorage.getItem('highScores')) || []
 finalScore.innerText = `Final Score: ${mostRecentScore}`
-//console.log(finalScore.innerText)
 username.addEventListener('keyup', () => {
     scoreBtn.disabled = !username.value
 })
